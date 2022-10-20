@@ -1,6 +1,5 @@
 import AttackBox from './classes/AttackBox.js';
 import CardBackground from './classes/CardBackground.js';
-import InfoBox from './classes/InfoBox.js';
 import HealthTracker from './classes/HealthTracker.js';
 import NameBox from './classes/NameBox.js';
 import StageBox from './classes/StageBox.js';
@@ -11,14 +10,11 @@ import c from './classes/Constants.js';
 var stage;
 var container;
 var inputsContainer;
-var scaleMultiplier = 10;
 var cardWidth = c.mmToPix(139);
 var cardHeight = c.mmToPix(107);
 var canvasId = "cardCanvas";
 
-var BOX_BORDER_STROKE = 4;
 var mainContentAreaHeight = 810;
-var healthBackgroundHeight = cardHeight - mainContentAreaHeight;
 
 
 window.onload = function() {
@@ -74,13 +70,13 @@ window.onload = function() {
   stage.update();
 }
 
-function createText(font, text) {
+/*function createText(font, text) {
     var txt = new createjs.Text();
     txt.font = font;
     txt.color = "#ffffff";
     txt.text = text;
     return txt;
-}
+}*/
 
 function drawAttackBoxes(attacks) {
     var attackBoxX = c.mmToPix(93);
